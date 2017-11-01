@@ -70,4 +70,7 @@ public interface StudentMapper
     		"join student on studentcourse.npm = student.npm " + 
     		"where studentcourse.id_course = #{id} ")
     		List<StudentModel> selectParticipants(@Param("id") String id);
+    
+    @Select("select id_course as idCourse, name, credits from course")
+    List<CourseModel> selectAllCourses();
 }

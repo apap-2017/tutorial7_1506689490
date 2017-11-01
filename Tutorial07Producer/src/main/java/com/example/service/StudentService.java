@@ -11,8 +11,9 @@ public interface StudentService
 
 
     List<StudentModel> selectAllStudents ();
+    List<CourseModel> selectAllCourse();
     CourseModel selectCourse(String id);
-
+    
 
     void addStudent (StudentModel student);
 
@@ -20,5 +21,6 @@ public interface StudentService
     void deleteStudent (String npm);
     
     void updateStudent (StudentModel student);
+    
     
 }

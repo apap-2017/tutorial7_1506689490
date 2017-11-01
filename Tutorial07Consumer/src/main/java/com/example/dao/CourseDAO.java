@@ -1,5 +1,10 @@
 package com.example.dao;
 
-public interface CourseDAO {
+import java.util.List;
 
+import com.example.model.CourseModel;
+
+public interface CourseDAO {
+	CourseModel selectCourse(String id_course);
+	List<CourseModel> selectAllCourses();
 }

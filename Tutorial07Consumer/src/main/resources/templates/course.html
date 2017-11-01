@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title th:replace="fragments/fragment :: title"></title>
+</head>
+<body>
+	<h3 th:text="'ID = ' + ${course.idCourse}"></h3>
+	<h3 th:text="'Nama = ' + ${course.name}"></h3>
+	<h3 th:text="'credits = ' + ${course.credits}"></h3>
+	<h3>Mahasiswa yang mengambil</h3>
+	<ul th:each="student,iterationStatus: ${course.students}">
+		<li th:text="${student.npm} + '-' + ${student.name}" >
+			
+		</li>
+	</ul>
+</body>
+</html>

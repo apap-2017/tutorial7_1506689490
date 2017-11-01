@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:each="course,iterationStatus: ${courses}">
+		<p th:text="'ID  : ' + ${course.idCourse}"></p>
+		<p th:text="'Nama  : ' + ${course.name}"></p>
+		<p th:text="'Sks  : ' + ${course.credits}"></p>
+		<hr/>
+	</div>
+</body>
+</html>

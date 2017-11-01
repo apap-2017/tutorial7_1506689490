@@ -200,6 +200,13 @@ public class StudentController
     	return "not-found";
     }
     
+    @RequestMapping("/course/viewall")
+    public String courses(Model model){
+    	List<CourseModel> courses = studentDAO.selectAllCourses();
+    	model.addAttribute("courses", courses);
+    	return "course-all";
+    }
+    
     @RequestMapping("/course/view/{id}")
     public String course(@PathVariable(value="id") String id, Model model){
     	

@@ -59,6 +59,13 @@ public class StudentServiceRest implements StudentService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public List<CourseModel> selectAllCourses() {
+		// TODO Auto-generated method stub
+		log.info ("REST - select all courses");
+		return courseDAO.selectAllCourses();
+	}
 	
 	
 }

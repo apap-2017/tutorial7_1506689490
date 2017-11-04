@@ -27,7 +27,6 @@ public class StudentDAOImp1 implements StudentDAO {
 
 	@Override
 	public List<StudentModel> selectAllStudents() {
-		// TODO Auto-generated method stub
 		ResponseEntity<List<StudentModel>> rateResponse =
 		        restTemplate.exchange("http://localhost:8080/rest/student/viewall",
 		                    HttpMethod.GET, null, new ParameterizedTypeReference<List<StudentModel>>() {

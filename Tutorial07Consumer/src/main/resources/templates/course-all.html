@@ -9,6 +9,11 @@
 		<p th:text="'ID  : ' + ${course.idCourse}"></p>
 		<p th:text="'Nama  : ' + ${course.name}"></p>
 		<p th:text="'Sks  : ' + ${course.credits}"></p>
+		<ul th:each="student,iterationStatus: ${course.students}">
+			<li th:text="${student.npm} + '-' + ${student.name}" >
+			
+			</li>
+		</ul>
 		<hr/>
 	</div>
 </body>
